@@ -1,0 +1,35 @@
+.taskContainer {
+  background-color: #444;
+  border-radius: 7px;
+  margin: 8px 0;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.taskTitle {
+  cursor: pointer;
+  flex: 6;
+}
+.removeBtn {
+  background-color: #444;
+  border: none;
+  color: chartreuse;
+  font-size: 20px;
+  flex: 1;
+}
+.removeBtn:hover {
+  cursor: pointer;
+}
+
+.detailsBtn {
+  background-color: #444;
+  border: none;
+  color: chartreuse;
+  font-size: 20px;
+  flex: 1;
+  margin-left: 8px;
+}
+.detailsBtn:hover {
+  cursor: pointer;
+}
