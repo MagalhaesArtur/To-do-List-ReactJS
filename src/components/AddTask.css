@@ -23,6 +23,23 @@
   display: flex;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  .addTaskContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .btnContainer {
+    margin-top: 10px;
+    width: 150px;
+  }
+}
+
 .btnContainer {
   margin-left: 10px;
   flex: 1;
