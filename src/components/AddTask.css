@@ -21,6 +21,7 @@
 }
 .addTaskContainer {
   display: flex;
+  margin-bottom: 20px;
 }
 .btnContainer {
   margin-left: 10px;

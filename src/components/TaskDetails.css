@@ -1,0 +1,16 @@
+.taskDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.taskDetailsContainer h2 {
+  margin-bottom: 15px;
+  color: chartreuse;
+}
+.backButton {
+  width: 120px;
+  margin-bottom: 15px;
+}

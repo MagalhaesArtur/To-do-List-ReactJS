@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Task.css";
 import { CgClose, CgInfo } from "react-icons/cg";
+
 const Task = ({ task, handleTaskClick, handleTaskDelete }) => {
+  let navigate = useNavigate();
+
+  const handleTaskDetailsClick = () => {
+    navigate(`/${task.title}`);
+  };
   return (
     <div
       className="taskContainer"
@@ -24,7 +31,8 @@ const Task = ({ task, handleTaskClick, handleTaskDelete }) => {
         >
           <CgClose />
         </button>
-        <button onClick={() => {}} className="detailsBtn">
+
+        <button onClick={handleTaskDetailsClick} className="detailsBtn">
           <CgInfo />
         </button>
       </div>

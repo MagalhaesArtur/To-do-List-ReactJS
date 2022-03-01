@@ -12,6 +12,6 @@
 }
 .btn:hover {
   cursor: pointer;
-  background-color: #222;
+  background-color: #444;
   color: chartreuse;
 }
