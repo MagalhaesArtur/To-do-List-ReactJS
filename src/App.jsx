@@ -7,9 +7,15 @@ import { v4 as uuidv4 } from "uuid";
 import Header from "./components/Header";
 import TaskDetails from "./components/TaskDetails";
 import axios from "axios";
+import Modal from "../src/components/Modal";
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+  // const handleShowAddTask = ()=>{
+
+  // }
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -32,6 +38,7 @@ const App = () => {
       },
     ];
     setTasks(newTask);
+    changeVisibility();
   };
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
@@ -47,6 +54,9 @@ const App = () => {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
   };
+  const changeVisibility = () => {
+    setShowModal(false);
+  };
   return (
     <Router>
       <main className="main">
@@ -58,7 +68,24 @@ const App = () => {
               exact
               element={
                 <div>
-                  <AddTask handleTaskAddition={handleTaskAddition} />
+                  <button
+                    onClick={() => {
+                      setShowModal(true);
+                    }}
+                    className="addBtn"
+                  >
+                    +
+                  </button>
+
+                  <Modal
+                    showModal={showModal}
+                    changeVisibility={changeVisibility}
+                  >
+                    <AddTask
+                      handleTaskAddition={handleTaskAddition}
+                      changeVisibility={changeVisibility}
+                    />
+                  </Modal>
                   <Tasks
                     tasks={tasks}
                     handleTaskClick={handleTaskClick}

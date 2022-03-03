@@ -30,3 +30,22 @@
 .main {
   height: 100%;
 }
+.addBtn {
+  width: 80px;
+  height: 80px;
+  background-color: chartreuse;
+  border: 2px solid chartreuse;
+  color: #111;
+  font-size: 30px;
+  border-radius: 50%;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+
+.addBtn:hover {
+  cursor: pointer;
+  background-color: #444;
+  color: chartreuse;
+}

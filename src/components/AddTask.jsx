@@ -8,7 +8,11 @@ const AddTask = ({ handleTaskAddition }) => {
     setInputData(e.target.value);
   };
   const handleAddTaskClick = () => {
+    if (inputData === "") {
+      return alert("Insira uma Tarefa!");
+    }
     handleTaskAddition(inputData);
+
     setInputData("");
   };
   return (
